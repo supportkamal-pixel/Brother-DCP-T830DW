@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Official Printer Quotation — Kamal Kant Tiwari</title>
+<!-- Google Fonts -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ✅ ULTRA PRO THEME VARIABLES (डार्क थीम) */
+:root {
+  --bg: #0d0d1a;
+  --card: rgba(255,255,255,0.04);
+  --border: rgba(255,255,255,0.10);
+  --gold: #f7c948;
+  --green: #00e676;
+  --brother-blue: #00509d; 
+  --text: #f0f0f0;
+  --muted: #888;
+  --brand-new: #00b8d4;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:linear-gradient(135deg,#0d0d1a 0%,#151530 60%,#0a1020 100%); color:var(--text); min-height:100vh; overflow-x: hidden; }
+
+/* ✅ बैकग्राउंड पार्टिकल्स एनीमेशन */
+body::before { content:''; position:fixed; top:0;left:0;width:100%;height:100%; background:radial-gradient(circle at 20% 20%,rgba(0,184,212,.08) 0%,transparent 50%),radial-gradient(circle at 80% 80%,rgba(0,80,157,.08) 0%,transparent 50%); pointer-events:none; z-index:0; }
+.particles { position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden; }
+.particle { position:absolute;border-radius:50%;background:rgba(0,184,212,.2);animation:pFloat linear infinite; }
+@keyframes pFloat { 0%{transform:translateY(100vh) rotate(0deg);opacity:0} 10%,90%{opacity:1} 100%{transform:translateY(-10vh) rotate(720deg);opacity:0} }
+
+.wrap { max-width:1400px;margin:0 auto;padding:20px;position:relative;z-index:1; }
+
+/* ✅ ब्रांड हेडर (Top Bar) */
+.brand-hdr {
+  background:linear-gradient(135deg,rgba(0,50,150,.65) 0%,rgba(0,130,210,.45) 50%,rgba(0,50,150,.65) 100%);
+  border:1px solid rgba(0,150,214,.45); border-radius:16px; padding:18px 26px;
+  margin-bottom:26px; display:flex; align-items:center; justify-content:space-between;
+  flex-wrap:wrap; gap:16px; backdrop-filter:blur(20px);
+  box-shadow:0 8px 30px rgba(0,150,214,.15);
+}
+.bl { display:flex;align-items:center;gap:14px; }
+/* ✅ LIVE LOGO ANIMATION */
+.av { width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,var(--brand-new),#00509d);display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:900;color:#fff;border:2px solid rgba(255,255,255,.8); position:relative; z-index:1; animation: pulseGlow 2s infinite; cursor:pointer; }
+.av::before { content:''; position:absolute; top:-4px; left:-4px; right:-4px; bottom:-4px; border-radius:50%; border:2px dashed var(--gold); animation: spinBorder 8s linear infinite; z-index:-1; }
+@keyframes spinBorder { 100% { transform:rotate(360deg); } }
+@keyframes pulseGlow { 0% { box-shadow: 0 0 0 0 rgba(0, 184, 212, 0.7); } 70% { box-shadow: 0 0 0 12px rgba(0, 184, 212, 0); } 100% { box-shadow: 0 0 0 0 rgba(0, 184, 212, 0); } }
+
+/* ✅ SMART VIDEO PLAY BUTTON */
+.play-overlay { position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); width:65px; height:65px; background:rgba(0,0,0,0.6); color:var(--brand-new); border:3px solid var(--brand-new); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:28px; cursor:pointer; z-index:10; backdrop-filter:blur(4px); transition:0.3s; padding-left:5px; }
+.play-overlay:hover { background:var(--brand-new); color:#fff; transform:translate(-50%, -50%) scale(1.1); box-shadow:0 10px 25px rgba(0,184,212,0.5); }
+
+/* ✅ VIDEO FULLSCREEN BUTTON */
+.vid-fs-btn { position:absolute; top:15px; right:15px; background:rgba(0,0,0,0.6); color:#fff; border:1px solid rgba(255,255,255,0.4); border-radius:6px; padding:6px 12px; font-size:13px; font-weight:600; cursor:pointer; z-index:10; transition:0.3s; display:flex; align-items:center; gap:6px; letter-spacing:1px; backdrop-filter:blur(4px); }
+.vid-fs-btn:hover { background:var(--brand-new); border-color:var(--brand-new); box-shadow:0 5px 15px rgba(0,184,212,0.4); }
+
+/* ✅ IT PROFILE CARD */
+.it-profile { margin-top:25px; padding:18px; background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(0,184,212,0.05)); border:1px solid rgba(0,184,212,0.2); border-radius:14px; }
+.it-title { font-size:14px; font-weight:800; color:var(--brand-new); text-transform:uppercase; letter-spacing:1px; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+.it-list { list-style:none; }
+.it-list li { font-size:13px; color:rgba(255,255,255,0.85); margin-bottom:8px; padding-left:22px; position:relative; }
+.it-list li::before { content:'✔'; position:absolute; left:0; color:var(--gold); font-size:12px; font-weight:900; }
+
+/* ✅ QUOTATION FOOTER (नीली पट्टी) */
+/* ✅ QUOTATION FOOTER (Glass Effect & Tilt) */
+.kkt-footer { 
+  background: rgba(10, 75, 168, 0.45); /* 🪟 ग्लास टाइप ट्रांसपेरेंट ब्लू */
+  backdrop-filter: blur(15px); 
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.15); 
+  border-radius: 12px; 
+  padding: 25px 20px; 
+  text-align: center; 
+  margin-top: 40px; 
+  margin-bottom: 20px; 
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); 
+  width: 100%; 
+}
+.kf-badge { 
+  display: inline-block; 
+  border: 2px solid var(--gold); 
+  color: var(--gold); 
+  font-weight: 800; 
+  padding: 6px 18px; 
+  border-radius: 8px; 
+  font-size: 14px; 
+  letter-spacing: 2px; 
+  margin-bottom: 15px; 
+  transform: rotate(-3deg); /* 🔥 हल्का सा टिल्ट (तिरछा) */
+  background: rgba(0, 0, 0, 0.15);
+}
+/* फुलस्क्रीन होने पर बैकग्राउंड ब्लैक करने के लिए */
+.main-img-box:fullscreen { background: #000 !important; border:none; }
+.main-img-box:-webkit-full-screen { background: #000 !important; border:none; }
+.kf-name { font-size: 22px; font-weight: 800; color: #fff; margin-bottom: 4px; }
+.kf-sub { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.9); margin-bottom: 20px; }
+.kf-contact { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; font-size: 13px; font-weight: 600; color: #fff; margin-bottom: 20px; }
+.kf-contact a { color: #fff; text-decoration: none; }
+.kf-meta { font-size: 11px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+
+/* ✅ VIDEO FULLSCREEN BUTTON FIX */
+.vid-fs-btn { position:absolute; top:15px; right:15px; background:rgba(0,0,0,0.7); color:#fff; border:1px solid rgba(255,255,255,0.4); border-radius:6px; padding:6px 12px; font-size:13px; font-weight:600; cursor:pointer; z-index:9999; transition:0.3s; display:flex; align-items:center; gap:6px; backdrop-filter:blur(4px); }
+.vid-fs-btn:hover { background:var(--brand-new); border-color:var(--brand-new); }
+
+/* ✅ ACTION BUTTONS (CALL & WA) */
+.action-btns { display:flex; gap:12px; margin-top:12px; }
+.btn-call { flex:1; background:linear-gradient(135deg, #00b259, #008a45); color:#fff; font-weight:800; padding:14px; border-radius:10px; text-align:center; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:6px; transition:0.3s; border:1px solid #00e676; }
+.btn-wa { flex:1; background:linear-gradient(135deg, #25D366, #128C7E); color:#fff; font-weight:800; padding:14px; border-radius:10px; text-align:center; text-decoration:none; display:inline-flex; align-items:center; justify-content:center; gap:6px; transition:0.3s; border:1px solid #4FCE5D; }
+.btn-call:hover, .btn-wa:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,230,118,0.3); }
+.bn { font-size:20px;font-weight:800;background:linear-gradient(135deg,#fff,var(--gold));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text; }
+.bs { font-size:10px;color:rgba(255,255,255,.5);text-transform:uppercase;letter-spacing:2px;margin-top:2px; }
+.br { display:flex;align-items:center;gap:18px;flex-wrap:wrap; }
+.cr { display:flex;align-items:center;gap:8px;font-size:12px;color:rgba(255,255,255,.85); }
+.cr a { color:inherit; text-decoration:none; } .cr a:hover { color:var(--gold); }
+.qref { background:rgba(247,201,72,.14);border:1px solid rgba(247,201,72,.3);border-radius:8px;padding:6px 12px;text-align:center; }
+.ql { font-size:8px;color:var(--gold);text-transform:uppercase;letter-spacing:1px; }
+.qv { font-size:13px;font-weight:700;color:#fff; }
+
+/* =========================================================
+   ✅ AMAZON STYLE E-COMMERCE LAYOUT (Main Structure)
+   ========================================================= */
+.amazon-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+/* डेस्कटॉप के लिए 2-कॉलम (Left Image, Right Details) */
+@media (min-width: 992px) {
+  .amazon-layout {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* --- 🖼️ LEFT SIDE: GALLERY SECTION (Amazon Style Image Viewer) --- */
+.gallery-section {
+  width: 100%;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+/* डेस्कटॉप पर गैलरी अपनी जगह फिक्स (Sticky) रहेगी */
+@media (min-width: 992px) {
+  .gallery-section {
+    width: 45%;
+    position: sticky;
+    top: 20px;
+  }
+}
+
+/* बीच वाली बड़ी इमेज (Main Image Box) */
+.main-img-box {
+  width: 100%;
+  height: 350px;
+  background: #ffffff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  cursor: zoom-in;
+  border: 2px solid transparent;
+  transition: 0.3s;
+}
+.main-img-box:hover { border-color: rgba(0, 184, 212, 0.5); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+.main-img-box img, .main-img-box video {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+  filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+}
+.main-img-box:hover img { transform: scale(1.05); }
+
+/* मोबाइल स्वाइप हिंट (Mobile Swipe Hint) */
+.swipe-hint { display: none; position: absolute; bottom: 10px; background: rgba(0,0,0,0.6); color: #fff; font-size: 10px; padding: 4px 12px; border-radius: 20px; letter-spacing: 1px; pointer-events: none; }
+@media (max-width: 991px) { .swipe-hint { display: block; } }
+
+/* नीचे के छोटे थंबनेल ब्लॉक्स (Thumbnails Line) */
+.thumb-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+  overflow-x: auto;
+  padding-bottom: 5px;
+  scroll-behavior: smooth;
+}
+.thumb-row::-webkit-scrollbar { height: 4px; }
+.thumb-row::-webkit-scrollbar-thumb { background: var(--brand-new); border-radius: 4px; }
+.thumb-box {
+  width: 70px;
+  height: 70px;
+  background: #ffffff;
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 0.3s;
+  padding: 5px;
+}
+.thumb-box img { width: 100%; height: 100%; object-fit: contain; }
+/* जो थंबनेल सेलेक्टेड है, उसका बॉर्डर चमकेगा */
+.thumb-box.active { border: 2px solid var(--brand-new); box-shadow: 0 0 10px rgba(0, 184, 212, 0.4); transform: scale(1.05); }
+
+
+/* --- 📝 RIGHT SIDE: DETAILS SECTION --- */
+.details-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+@media (min-width: 992px) {
+  .details-section { width: 55%; }
+}
+
+/* प्रोडक्ट टाइटल और बैज */
+.prod-header .badge { display:inline-block; background:rgba(0,184,212,.15); color:#00e5ff; padding:5px 14px; border-radius:50px; font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:12px; border:1px solid rgba(0,184,212,.3); }
+.prod-header h1 { font-size:clamp(24px, 3.5vw, 36px); font-weight:900; background:linear-gradient(135deg,#fff 0%,var(--brand-new) 80%); -webkit-background-clip:text; -webkit-text-fill-color:transparent; line-height:1.2; margin-bottom: 8px; }
+.prod-header p { color:var(--muted); font-size:14px; }
+
+/* क्विक फीचर्स ग्रिड */
+.quick-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 12px; }
+.qs-box { background: rgba(255,255,255,0.03); border: 1px solid var(--border); padding: 12px; border-radius: 10px; display:flex; align-items:center; gap:12px; transition:0.3s; }
+.qs-box:hover { background: rgba(255,255,255,0.07); transform:translateY(-2px); }
+.qs-icon { font-size:24px; }
+.qs-text .qt-val { font-size:15px; font-weight:800; color:var(--gold); }
+.qs-text .qt-lbl { font-size:10px; color:var(--muted); text-transform:uppercase; letter-spacing:1px; }
+
+/* A TO Z डिटेल्स लिस्ट (Amazon Style Specification List) */
+.specs-container { background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+.specs-container h3 { font-size:16px; color:#fff; border-bottom:1px solid rgba(255,255,255,0.1); padding-bottom:10px; margin-bottom:15px; }
+.spec-row { display: flex; padding: 8px 0; border-bottom: 1px dashed rgba(255,255,255,0.05); font-size: 13.5px; }
+.spec-row:last-child { border-bottom: none; }
+.spec-key { width: 40%; color: var(--muted); font-weight: 500; }
+.spec-val { width: 60%; color: #fff; font-weight: 600; }
+.hl { color: var(--brand-new); font-weight: 800; }
+
+/* 💰 प्राइसिंग और बटन (Amazon 'Buy Box' Style) */
+.price-box { background: linear-gradient(135deg, rgba(0,80,157,0.3) 0%, rgba(0,184,212,0.1) 100%); border: 1px solid rgba(0,184,212,0.4); border-radius: 16px; padding: 24px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
+.pb-title { font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:5px; }
+.pb-price { font-size:38px; font-weight:900; color:#fff; display:flex; align-items:baseline; gap:5px; }
+.pb-price span { font-size:16px; font-weight:600; color:var(--gold); }
+.pb-tax-info { font-size:12px; color:#00e5ff; font-weight:600; margin-bottom:20px; }
+.pb-btn { width:100%; display:inline-flex; align-items:center; justify-content:center; gap:8px; background:linear-gradient(135deg, var(--brand-new), #00509d); color:#fff; font-size:16px; font-weight:800; padding:15px; border-radius:10px; cursor:pointer; border:none; transition:0.3s; text-transform:uppercase; letter-spacing:1px; }
+.pb-btn:hover { transform:translateY(-3px); box-shadow:0 10px 25px rgba(0,184,212,0.4); }
+
+/* --- 🖼️ FULL SCREEN MODAL (ZOOM & SWIPE) --- */
+.modal-overlay { display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.95); backdrop-filter: blur(8px); touch-action: none; }
+.modal-content { position: absolute; top: 50%; left: 50%; max-width: 90%; max-height: 80vh; transform: translate(-50%, -50%) scale(1); border-radius: 12px; box-shadow: 0 10px 50px rgba(0,0,0,0.8); object-fit: contain; cursor: grab; }
+.modal-content:active { cursor: grabbing; }
+.modal-close { position: absolute; top: 20px; right: 35px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; z-index: 10001; }
+.modal-close:hover { color: var(--gold); transform: scale(1.1); }
+.modal-controls { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; gap: 30px; z-index: 10001; }
+.modal-prev, .modal-next { color: #fff; font-size: 20px; font-weight: bold; cursor: pointer; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 50%; display: flex; align-items: center; justify-content: center; width: 50px; height: 50px; backdrop-filter: blur(8px); }
+.modal-prev:hover, .modal-next:hover { color: var(--gold); background: rgba(255,255,255,0.25); border-color: var(--gold); }
+.modal-hint { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); color: rgba(255,255,255,0.8); font-size: 11px; letter-spacing: 1px; text-transform: uppercase; z-index: 10001; background: rgba(0,0,0,0.6); padding: 6px 16px; border-radius: 20px; pointer-events: none; }
+
+/* ✅ SMART PROFILE POSITIONING (Desktop vs Mobile) */
+@media (max-width: 991px) { 
+  .desktop-only { display: none !important; } 
+  .mobile-only { display: block !important; } 
+}
+@media (min-width: 992px) { 
+  .desktop-only { display: block !important; } 
+  .mobile-only { display: none !important; } 
+}
+
+@media print { 
+  *{-webkit-print-color-adjust:exact!important;color-adjust:exact!important;print-color-adjust:exact!important;}
+  body{background:#0f0f1e!important;color:#ddd!important;}
+  .particles,.pb-btn,.modal-overlay,.gallery-section{display:none!important;}
+  .amazon-layout{display:block;} .details-section{width:100%;}
+}
+</style>
+</head>
+<body>
+<!-- बैकग्राउंड एनीमेशन -->
+<div class="particles" id="particles"></div>
+<div class="wrap">
+
+<!-- 👑 ब्रांड हेडर -->
+<div class="brand-hdr">
+  <div class="bl">
+    <div class="av" title="Kamal Kant Tiwari">KKT</div> <!-- लाइव लोगो -->
+    <div><div class="bn">Kamal Kant Tiwari</div><div class="bs">High-Performance IT Systems & Hardware</div></div>
+  </div>
+  <div class="br">
+    <div class="cr">📞 <a href="tel:+919920300531"><strong>+91 9920 300 531</strong></a></div>
+    <div class="cr">✉️ <a href="mailto:supportkamal@gmail.com">supportkamal@gmail.com</a></div>
+    <div class="qref"><div class="ql">Quotation Ref</div><div class="qv">#KKT-PR-152</div></div>
+  </div>
+</div>
+
+<!-- ==========================================
+     ✅ AMAZON STYLE 2-COLUMN LAYOUT START
+     ========================================== -->
+<div class="amazon-layout">
+
+  <!-- 🖼️ LEFT COLUMN: IMAGE GALLERY -->
+  <div class="gallery-section">
+    <!-- Main Display Box (with Play Button) -->
+    <div class="main-img-box" id="mainImgBox">
+      <!-- पहली इमेज यहाँ ऑटो-लोड होगी -->
+      <img id="mainDisplayImg" src="https://m.media-amazon.com/images/I/61Nl0d+52IL._SL1500_.jpg" alt="Brother T830DW" onclick="openFullscreenModal()" style="cursor:zoom-in;">
+      <video id="mainDisplayVid" style="display:none; width:100%; height:100%;" controls></video>
+      <div id="playOverlay" class="play-overlay" style="display:none;" onclick="triggerVideoPlay()">▶</div>    
+      <div class="swipe-hint">👈 Swipe / Tap to Zoom 👉</div>
+    </div>
+    
+    <!-- Thumbnail Blocks (Amazon style horizontal scroll) -->
+    <div class="thumb-row" id="thumbRow">
+      <div class="thumb-box active" onclick="changeImage(0)">
+        <img src="https://res.cloudinary.com/dje4iytsn/image/upload/v1782294509/1_btziye.jpg" alt="Front">
+      </div>
+      <div class="thumb-box" onclick="changeImage(1)">
+        <img src="https://res.cloudinary.com/dje4iytsn/image/upload/v1782294510/5_jak8hv.jpg" alt="ADF Scanner">
+      </div>
+      <div class="thumb-box" onclick="changeImage(2)">
+        <img src="https://d91ztqmtx7u1k.cloudfront.net/ClientContent/Images/ExtraLarge/brother-dcp-t830dw-printer-20260530100701049.webp" alt="Tray">
+      </div>
+      <div class="thumb-box" onclick="changeImage(3)">
+        <img src="https://m.media-amazon.com/images/I/71M-U-O9VdL._SL1500_.jpg" alt="Ports">
+      </div>
+      <div class="thumb-box" onclick="changeImage(4)">
+        <img src="https://m.media-amazon.com/images/I/71lRBMr6o-L._SL1500_.jpg" alt="Ink">
+      </div>
+      <div class="thumb-box" onclick="changeImage(5)">
+      <img src="https://img.bobshop.co.za/f_auto,q_auto:eco,d_notfound.png/https%3A%2F%2Fwww.electromartonline.co.za%2Fwp-content%2Fuploads%2F2025%2F09%2F12-DCP-T830DW-KITf.jpg" alt="Ink">
+      </div>
+      <div class="thumb-box" onclick="changeImage(6)">
+      <img src="https://m.media-amazon.com/images/I/81hRjy-hwkL._SL1500_.jpg" alt="Ink">
+      </div>
+      <div class="thumb-box" onclick="changeImage(7)">
+      <img src="https://m.media-amazon.com/images/I/71WJQldu3GL._SL1500_.jpg" alt="Ink">
+      </div>
+      
+      <!-- 👇 VIDEO THUMBNAIL ADDED HERE 👇 -->
+      <div class="thumb-box" onclick="changeImage(8)">
+        <!-- YOUR_VIDEO_THUMBNAIL_URL_HERE की जगह वीडियो के थंबनेल (फोटो) का लिंक डालें -->
+        <img src="https://res.cloudinary.com/dje4iytsn/image/upload/v1782295151/Thumbnail_zljayr.png" alt="Video">
+      </div>
+      <!-- 👆 VIDEO THUMBNAIL ADDED HERE 👆 -->
+
+    </div>
+
+    <!-- 🚀 TOTAL IT SOLUTIONS PROFILE (NEW) -->
+    <div class="it-profile desktop-only">
+      <div class="it-title">💼IT Services by KKT</div>
+      <ul class="it-list">
+        <li><strong>Brand New & Refurbished:</strong> Laptops, Desktops, Monitor, Workstations & Printers.</li>
+        <li><strong>Custom Workstations:</strong> Heavy-duty builds for CA Offices, 3D Designing, DTP, Gaming & Interior Designers (etc...).</li>
+        <li><strong>Enterprise Networking:</strong>Networking.</li>
+        <li><strong>Server Management:</strong> Installations (OS, Software and many more).</li>
+        <li><strong>Corporate IT Support:</strong> Complete IT Hardware Setup & AMC Services.</li>
+        <li><strong>Corporate IT Support:</strong> All Types Of Repairing of Desktop & Laptops Motherboard, Laptop Screen Replacement (etc..).</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="details-section">
+    
+    <!-- Header Area -->
+    <div class="prod-header">
+      <div class="badge">📦 100% Brand New Sealed Box</div>
+      <h1>Brother DCP-T830DW All-in-One Ink Tank Printer</h1>
+      <p>Print • Scan • Copy • Auto-Duplex • ADF • Wi-Fi & LAN Network</p>
+    </div>
+
+    <!-- Quick Highlights -->
+    <div class="quick-stats">
+      <div class="qs-box">
+        <div class="qs-icon">⚡</div>
+        <div class="qs-text"><div class="qt-val">30 PPM</div><div class="qt-lbl">Max Speed</div></div>
+      </div>
+      <div class="qs-box">
+        <div class="qs-icon">📄</div>
+        <div class="qs-text"><div class="qt-val">Auto Duplex</div><div class="qt-lbl">2-Sided Print</div></div>
+      </div>
+      <div class="qs-box">
+        <div class="qs-icon">🌐</div>
+        <div class="qs-text"><div class="qt-val">Wi-Fi & LAN</div><div class="qt-lbl">Networking</div></div>
+      </div>
+      <div class="qs-box">
+        <div class="qs-icon">🛡️</div>
+        <div class="qs-text"><div class="qt-val">1 Year</div><div class="qt-lbl">OEM Warranty</div></div>
+      </div>
+    </div>
+
+    <!-- Price Box (Amazon Style Buy Box) -->
+    <div class="price-box">
+      <div class="pb-title">Official Quotation (Net Price)</div>
+      <div class="pb-price">₹ 21,200.00 <span>/- Only</span></div>
+      <div class="pb-tax-info">✅ Final Pricing • Includes Original Ink & Cables</div>
+      <button class="pb-btn" onclick="window.print()">🖨️ Print Quotation</button>
+      
+      <!-- 📱 1-CLICK ACTION BUTTONS -->
+      <div class="action-btns">
+        <a href="tel:+919920300531" class="btn-call">📞 Call Now</a>
+        <a href="https://wa.me/919920300531?text=Hi%20Kamal,%20I%20want%20to%20discuss%20the%20Brother%20DCP-T830DW%20Quotation%20(#KKT-PR-152)." target="_blank" class="btn-wa">💬 WhatsApp</a>
+      </div>
+    </div>
+
+    <!-- Detailed Specification Table (A to Z) -->
+    <div class="specs-container">
+      <h3>⚙️ Technical Specifications</h3>
+      <div class="spec-row"><div class="spec-key">Functions</div><div class="spec-val">Print, Scan, Copy (All-in-One)</div></div>
+      <div class="spec-row"><div class="spec-key">Technology</div><div class="spec-val">Inkjet (Refillable Ink Tank System)</div></div>
+      <div class="spec-row"><div class="spec-key">Max Speed</div><div class="spec-val hl">Up to 30 ppm (Black) / 26 ppm (Color)</div></div>
+      <div class="spec-row"><div class="spec-key">Auto 2-Sided</div><div class="spec-val hl">Yes (Auto Duplex Printing Supported)</div></div>
+      <div class="spec-row"><div class="spec-key">Paper Tray</div><div class="spec-val">150 Sheets Capacity (Main Cassette)</div></div>
+      <div class="spec-row"><div class="spec-key">ADF Scanner</div><div class="spec-val hl">Yes, Up to 20 Sheets Auto-Feed</div></div>
+      <div class="spec-row"><div class="spec-key">Connectivity</div><div class="spec-val hl">Wi-Fi, Ethernet LAN, USB 2.0</div></div>
+      <div class="spec-row"><div class="spec-key">Mobile Print</div><div class="spec-val">Brother iPrint&Scan, AirPrint, Wi-Fi Direct</div></div>
+      <div class="spec-row"><div class="spec-key">Ink Models</div><div class="spec-val">BTD60BK (Black), BT5000 (Color C/M/Y)</div></div>
+      <div class="spec-row"><div class="spec-key">OS Support</div><div class="spec-val">Windows 7/8/10/11, macOS, Linux CUPS</div></div>
+    </div>
+
+    </div> <div class="it-profile mobile-only" style="width: 100%; margin-top: 10px;">
+    <div class="it-title">💼 End-to-End IT Infrastructure by KKT</div>
+    <ul class="it-list">
+      <li><strong>Hardware Expert:</strong> Laptops, Desktops, Printers (New & Refurbished).</li>
+      <li><strong>Custom Workstations:</strong> CA Office, Gaming, 3D Design & DTP Solutions.</li>
+      <li><strong>Enterprise Networking:</strong> Router Configuration & Firewall Security.</li>
+      <li><strong>Corporate Support:</strong> Server Installation & AMC Services.</li>
+    </ul>
+
+  </div> <!-- End Right Column -->
+</div> <!-- End Amazon Layout -->
+
+</div> <div class="kkt-footer">
+    <div class="kf-badge">QUOTATION</div>
+    <div class="kf-name">Kamal Kant Tiwari</div>
+    <div class="kf-sub">High-Performance IT Systems & Hardware Setup</div>
+    
+    <div class="kf-contact">
+      <div><span style="color:#f50057; margin-right:5px;">📞</span> <a href="tel:+919920300531">+91 9920 300 531</a></div>
+      <div><span style="color:#fff; margin-right:5px;">✉️</span> <a href="mailto:supportkamal@gmail.com">supportkamal@gmail.com</a></div>
+      <div><span style="color:#ff1744; margin-right:5px;">📍</span> Malad West, Mumbai – 400064 IN Maharashtra, India</div>
+    </div>
+
+    <div class="kf-meta">
+      Quotation Ref: #KKT-PR-152 | Generated on: 24/6/2026<br>
+      Prices mentioned are final net prices and are subject to stock availability.<br>
+      © 2026 Kamal Kant Tiwari — All rights reserved.
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ==========================================
+     🖼️ FULL SCREEN ZOOM MODAL (Popup)
+     ========================================== -->
+<div id="fullScreenModal" class="modal-overlay">
+  <span class="modal-close" onclick="closeFullscreenModal()">&times;</span>
+  <div class="modal-hint">Swipe • Pinch • Scroll to Zoom</div>
+  <img class="modal-content" id="modalZoomImg">
+  
+  <div class="modal-controls">
+    <span class="modal-prev" onclick="modalSlide(-1)">&#10094;</span>
+    <span class="modal-next" onclick="modalSlide(1)">&#10095;</span>
+  </div>
+</div>
+
+</div>
+
+<script>
+// ✅ 1. बैकग्राउंड एनीमेशन
+const pc=document.getElementById('particles');
+for(let i=0;i<18;i++){const p=document.createElement('div');p.className='particle';p.style.cssText=`left:${Math.random()*100}%;width:${2+Math.random()*4}px;height:${2+Math.random()*4}px;animation-duration:${9+Math.random()*12}s;animation-delay:${Math.random()*12}s;opacity:${.12+Math.random()*.25}`;if(pc)pc.appendChild(p);}
+
+// ✅ 2. स्मार्ट मीडिया लिस्ट
+const mediaData = [
+  { type: 'image', url: "https://res.cloudinary.com/dje4iytsn/image/upload/v1782294509/1_btziye.jpg" },
+  { type: 'image', url: "https://res.cloudinary.com/dje4iytsn/image/upload/v1782294510/5_jak8hv.jpg" },
+  { type: 'image', url: "https://d91ztqmtx7u1k.cloudfront.net/ClientContent/Images/ExtraLarge/brother-dcp-t830dw-printer-20260530100701049.webp" },
+  { type: 'image', url: "https://m.media-amazon.com/images/I/71M-U-O9VdL._SL1500_.jpg" },
+  { type: 'image', url: "https://m.media-amazon.com/images/I/71lRBMr6o-L._SL1500_.jpg" },
+  { type: 'image', url: "https://img.bobshop.co.za/f_auto,q_auto:eco,d_notfound.png/https%3A%2F%2Fwww.electromartonline.co.za%2Fwp-content%2Fuploads%2F2025%2F09%2F12-DCP-T830DW-KITf.jpg" },
+  { type: 'image', url: "https://m.media-amazon.com/images/I/81hRjy-hwkL._SL1500_.jpg" },
+  { type: 'image', url: "https://m.media-amazon.com/images/I/71WJQldu3GL._SL1500_.jpg" },
+  { type: 'video', url: "https://res.cloudinary.com/dje4iytsn/video/upload/v1782294295/Brother_T830DW_hbh9gq.mp4", cover: "https://res.cloudinary.com/dje4iytsn/image/upload/v1782295151/Thumbnail_zljayr.png" }
+];
+
+let currentIndex = 0;
+const mainDisplayImg = document.getElementById("mainDisplayImg");
+const mainDisplayVid = document.getElementById("mainDisplayVid");
+const playBtn = document.getElementById("playOverlay");
+const fsBtn = document.getElementById("vidFsBtn"); // Fullscreen Button
+const thumbBoxes = document.querySelectorAll(".thumb-box");
+let currentVideoUrl = "";
+
+// ✅ 3. मास्टर फंक्शन (Media Switcher)
+function changeImage(index) {
+  currentIndex = index;
+  const media = mediaData[currentIndex];
+  
+  // सब कुछ रिसेट करें
+  if(mainDisplayVid) { mainDisplayVid.style.display = "none"; mainDisplayVid.pause(); }
+  if(playBtn) { playBtn.style.display = "none"; }
+  if(fsBtn) { fsBtn.style.display = "none"; } // फुलस्क्रीन बटन छुपाएं
+  if(mainDisplayImg) { mainDisplayImg.style.display = "none"; }
+  
+  if (media.type === 'image') {
+    mainDisplayImg.src = media.url;
+    mainDisplayImg.style.display = "block";
+    mainDisplayImg.style.cursor = "zoom-in";
+  } else if (media.type === 'video') {
+    currentVideoUrl = media.url;
+    mainDisplayImg.src = media.cover;
+    mainDisplayImg.style.display = "block";
+    mainDisplayImg.style.cursor = "pointer";
+    if(playBtn) playBtn.style.display = "flex";
+  }
+  
+  thumbBoxes.forEach(box => box.classList.remove("active"));
+  if(thumbBoxes[currentIndex]) {
+    thumbBoxes[currentIndex].classList.add("active");
+    thumbBoxes[currentIndex].scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+  }
+}
+
+// ✅ 4. वीडियो प्ले करने का फंक्शन
+function triggerVideoPlay() {
+  if(mainDisplayImg) mainDisplayImg.style.display = "none";
+  if(playBtn) playBtn.style.display = "none";
+  if(mainDisplayVid) {
+    mainDisplayVid.src = currentVideoUrl;
+    mainDisplayVid.style.display = "block";
+    mainDisplayVid.play();
+  }
+  if(fsBtn) fsBtn.style.display = "flex"; // प्ले होते ही फुलस्क्रीन बटन दिखाएं
+}
+
+// ✅ 6. वीडियो खत्म होने पर वापस थंबनेल पर आएं
+if(mainDisplayVid) {
+  mainDisplayVid.addEventListener('ended', function() {
+    mainDisplayVid.style.display = "none";
+    if(fsBtn) fsBtn.style.display = "none"; // बटन छुपाएं
+    if(mainDisplayImg) mainDisplayImg.style.display = "block";
+    if(playBtn) playBtn.style.display = "flex";
+    
+    // अगर फुल स्क्रीन में है, तो ऑटोमेटिक बाहर लाएं
+    if (document.fullscreenElement || document.webkitFullscreenElement) {
+        if(document.exitFullscreen) { document.exitFullscreen(); }
+        else if(document.webkitExitFullscreen) { document.webkitExitFullscreen(); }
+    }
+  });
+}
+
+// ✅ 7. ज़ूम मोडल लॉजिक (Images के लिए)
+let currentZoom = 1;
+const modal = document.getElementById("fullScreenModal");
+const modalZoomImg = document.getElementById("modalZoomImg");
+
+function openFullscreenModal() {
+  if(mediaData[currentIndex].type === 'video') {
+     triggerVideoPlay();
+     return;
+  }
+  if(modal && modalZoomImg) {
+    modal.style.display = "block";
+    modalZoomImg.src = mediaData[currentIndex].url;
+    resetZoom();
+  }
+}
+
+function closeFullscreenModal() {
+  if(modal) modal.style.display = "none";
+  resetZoom();
+}
+
+function modalSlide(step) {
+  let newIdx = (currentIndex + step + mediaData.length) % mediaData.length;
+  while(mediaData[newIdx].type === 'video') {
+     newIdx = (newIdx + step + mediaData.length) % mediaData.length;
+  }
+  changeImage(newIdx);
+  if(modalZoomImg) modalZoomImg.src = mediaData[currentIndex].url;
+  resetZoom();
+}
+
+function resetZoom() {
+  currentZoom = 1;
+  if(modalZoomImg) modalZoomImg.style.transform = `translate(-50%, -50%) scale(1)`;
+}
+
+window.onclick = function(event) { if (event.target == modal) closeFullscreenModal(); }
+document.addEventListener('keydown', function(event) {
+  if (modal && modal.style.display === "block") {
+    if (event.key === "ArrowLeft") modalSlide(-1);
+    if (event.key === "ArrowRight") modalSlide(1);
+    if (event.key === "Escape") closeFullscreenModal();
+  }
+});
+
+// 🚀 ऑटो-लोड फिक्स
+window.onload = function() { changeImage(0); };
+</script>
+</body>
+</html>
